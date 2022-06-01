@@ -8,7 +8,7 @@ def distance(city1: dict, city2: dict):
     return math.sqrt((city1['x'] - city2['x']) ** 2 + (city1['y'] - city2['y']) ** 2)
 
 
-def main(file):
+def main_aco(file):
     cities = []
     points = []
     with open(file) as f:
@@ -18,6 +18,7 @@ def main(file):
             points.append((int(city[1]), int(city[2])))
     cost_matrix = []
     rank = len(cities)
+
     for i in range(rank):
         row = []
         for j in range(rank):
@@ -26,9 +27,10 @@ def main(file):
     aco = ACO(10, 100, 1.0, 10.0, 0.5, 10, 2)
     graph = Graph(cost_matrix, rank)
     path, cost = aco.solve(graph)
+    print('ACO')
     print('cost: {}, path: {}'.format(cost, path))
     #plot(points, path)
     return cost
 
 if __name__ == '__main__':
-    main()
+    main_aco()
