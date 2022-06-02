@@ -22,8 +22,8 @@ def main_genetic(file):
     cost_matrix = []
     rank = len(cities)
 
-    ga = GeneticAlgorithm(cities=cities, iterations=1200, population_size=100,
-                                          elites_num=20, mutation_rate=0.008, greedy_seed=1,
+    ga = GeneticAlgorithm(cities=cities, iterations=100, population_size=20,
+                                          elites_num=20, mutation_rate=0.01, greedy_seed=1,
                                           roulette_selection=True, plot_progress=False)
     ga.run()
     cost = ga.best_distance()

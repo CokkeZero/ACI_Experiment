@@ -22,7 +22,7 @@ def main_anneal(file):
     cost_matrix = []
     rank = len(cities)
 
-    sa = SimAnneal(cities, stopping_iter=10000)
+    sa = SimAnneal(cities, alpha=1, temperature=0.01, stopping_iter=100)
     sa.run()
     cost = sa.best_fitness
     #graph = Graph(cost_matrix, rank)

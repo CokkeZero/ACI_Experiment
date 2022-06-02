@@ -24,11 +24,13 @@ def main_aco(file):
         for j in range(rank):
             row.append(distance(cities[i], cities[j]))
         cost_matrix.append(row)
-    aco = ACO(10, 100, 1.0, 10.0, 0.5, 10, 2)
+    # aco = ACO(10, 10000, 1.0, 10.0, 0.5, 10, 2)
+    aco = ACO(ant_count=len(cities), generations=100, alpha=1, beta=1, rho=0.5, q=10,strategy=2)
     graph = Graph(cost_matrix, rank)
     path, cost = aco.solve(graph)
     print('ACO')
-    print('cost: {}, path: {}'.format(cost, path))
+    print(cost)
+    # print('cost: {}, path: {}'.format(cost, path))
     #plot(points, path)
     return cost
 

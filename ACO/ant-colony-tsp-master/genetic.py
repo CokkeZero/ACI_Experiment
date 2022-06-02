@@ -126,10 +126,11 @@ class GeneticAlgorithm:
         for ind in range(0, self.iterations):
             self.next_generation()
             self.progress.append(self.best_distance())
-            if self.plot_progress and ind % 10 == 0:
-                self.plot()
-            elif not self.plot_progress and ind % 10 == 0:
-                a = 'test'
+            #print(self.best_distance())
+            # if self.plot_progress and ind % 10 == 0:
+            #     self.plot()
+            # elif not self.plot_progress and ind % 10 == 0:
+            #     a = 'test'
 
     def plot(self):
         print(self.best_distance())

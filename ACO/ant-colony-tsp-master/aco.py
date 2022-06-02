@@ -17,7 +17,7 @@ class ACO(object):
     def __init__(self, ant_count: int, generations: int, alpha: float, beta: float, rho: float, q: int,
                  strategy: int):
         """
-        :param ant_count:
+        :param ant_count: 
         :param generations:
         :param alpha: relative importance of pheromone
         :param beta: relative importance of heuristic information
