@@ -16,9 +16,9 @@ def main_anneal(file):
     with open(file) as f:
         for line in f.readlines():
             city = line.split(' ')
-            cities_ann.append(dict(index=int(city[0]), x=int(city[1]), y=int(city[2])))
-            points.append((int(city[1]), int(city[2])))
-            cities.append(City(int(city[1]), int(city[2])))
+            cities_ann.append(dict(index=float(city[0]), x=float(city[1]), y=float(city[2])))
+            points.append((float(city[1]), float(city[2])))
+            cities.append(City(float(city[1]), float(city[2])))
     cost_matrix = []
     rank = len(cities)
 
