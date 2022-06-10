@@ -2,7 +2,6 @@ import math
 from genetic import GeneticAlgorithm
 from util import City
 from aco import ACO, Graph
-from plot import plot
 
 
 def distance(city1: dict, city2: dict):
@@ -27,10 +26,6 @@ def main_genetic(file):
                                           roulette_selection=True, plot_progress=False)
     ga.run()
     cost = ga.best_distance()
-    #graph = Graph(cost_matrix, rank)
-    #path, cost = aco.solve(graph)
-    #print('cost: {}, path: {}'.format(sa.best_fitness, sa.route))
-    #plot(points, path)
     print('Genetic')
     print(cost)
     return cost

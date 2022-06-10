@@ -2,7 +2,6 @@ import math
 from anneal import SimAnneal
 from util import City
 from aco import ACO, Graph
-from plot import plot
 
 
 def distance(city1: dict, city2: dict):
@@ -25,10 +24,6 @@ def main_anneal(file):
     sa = SimAnneal(cities, alpha=1, temperature=0.01, stopping_iter=100)
     sa.run()
     cost = sa.best_fitness
-    #graph = Graph(cost_matrix, rank)
-    #path, cost = aco.solve(graph)
-    #print('cost: {}, path: {}'.format(sa.best_fitness, sa.route))
-    #plot(points, path)
     print('Anneal')
     print(cost)
     return cost

@@ -1,5 +1,5 @@
 from statistics import mean, median
-import numpy as np
+import json as np
 import json
 from main_aco import main_aco
 from getFiles import getFiles
